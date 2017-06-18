@@ -19,9 +19,8 @@ fwrite($idfile, $txt);
 fclose($idfile);
 
 //Start Spaming
-move("plugs/D/smsg-1.php","plugs/E/smsg-1.php");
-move("plugs/D/smsg-2.php","plugs/E/smsg-2.php");
-exec("php plugs/E/smsg-1.php");
+move("plugs/D/smsg.php","plugs/E/smsg.php");
+exec("php plugs/E/smsg.php");
 
 }
 
