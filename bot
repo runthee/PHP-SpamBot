@@ -1,1 +1,33 @@
-//Soon
+#!/bin/bash
+
+install(){
+  sudo apt-get install apache2
+  sudo apt-get install mysql-server
+  sudo apt-get install php5 libapache2-mod-php5
+  sudo /etc/init.d/apache2 restart
+  }
+  
+run(){
+  echo WelCome To PHP-SpmBot !\nPlease Enter Your Server IP:
+  read ip
+  echo $ip >> data/ip
+  echo Thanks Your IP Seted To : $ip !
+  echo Please Enter Your GroupID(Target):
+  read id
+  echo $id >> data/gpid
+  echo Thanks Your Target Seted To: $id
+  echo Please Enter Your Spam Text:
+  read text
+  echo $text >> data/text
+  echo Please Enter a Password For Start Spaming\nPassword:
+  read pass
+  echo $pass >> data/pass
+  php bot.php
+  echo Spaming To The Target\nYou Can exit From This Terminal With Click Ctrl + C\nPHP-SpmBot Made By FoxTeam !
+}
+
+stop(){
+echo Stoping Spam.....
+php stop.php
+echo Done!
+}
