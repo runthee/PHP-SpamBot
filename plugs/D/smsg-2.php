@@ -8,5 +8,5 @@ $ip = file_get_contents("../../data/ip");
 $id = file_get_contents("../../data/id");
 
 file_get_contents("http://api.telegram.org/bot".$token."/sendmessage?chat_id=".$id."&text=".$text);
-exec("php smsg-1.php");
+exec("php smsg.php");
 ?>
